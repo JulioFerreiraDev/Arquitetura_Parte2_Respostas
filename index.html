@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Revisão para a Segunda Prova de Arquitetura de Computadores. Inclui perguntas e respostas sobre diversos temas como otimização de arquitetura, avaliação de desempenho, memória e arquiteturas avançadas.">
+    <title>Revisão - Arquitetura de Computadores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #0078D7;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        main {
+            padding: 1rem;
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+	h1 {
+	    color: #5b5b58;
+	}
+        h2, h3 {
+            color: #0078D7;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Revisão para Segunda Prova de Arquitetura de Computadores</h1>
+	<li>By: Teacher Julio Ferreira</li>
+    </header>
+    <main>
+        <section id="tema1">
+            <h2>Tema 1: Otimização de Arquitetura</h2>
+            <ul>
+                <li><strong>Explique como a paralelização das instruções pode aumentar a eficiência de uma arquitetura:</strong> Permite executar várias instruções simultaneamente em diferentes estágios do processador, aumentando o throughput e a eficiência, pois reduz o tempo total necessário para processar múltiplas instruções.</li>
+                <li><strong>Quais são as principais diferenças entre pipelines estáticos e dinâmicos?</strong>
+                    <ul>
+                        <li><strong>Estáticos:</strong> Decisões fixas implementadas pelo hardware.</li>
+                        <li><strong>Dinâmicos:</strong> Decisões em tempo de execução, maior flexibilidade.</li>
+                    </ul>
+                </li>
+                <li><strong>Considere um pipeline com 5 estágios, onde cada estágio demora 2 ns. Qual é o tempo total de execução de 100 instruções, assumindo que não há dependências entre elas?</strong>
+                    <pre>
+Latência do pipeline: 10 ns
+Tempo para as próximas 99 instruções: 198 ns
+Tempo total: 208 ns
+                    </pre>
+                </li>
+            </ul>
+        </section>
+
+        <section id="tema2">
+            <h2>Tema 2: Avaliação de Desempenho</h2>
+            <ul>
+                <li><strong>Um processador executa um programa em 10 segundos. Após uma otimização, a parte do programa que ocupa 50% do tempo é acelerada por um fator de 2. Qual é o novo tempo total de execução?</strong>
+                    <pre>
+T_novo = 10 / (0.5 + 0.25) = 13.33 segundos
+                    </pre>
+                </li>
+                <li><strong>Speedup relativo de P2 em relação a P1:</strong>
+                    <ul>
+                        <li><strong>Tarefa A:</strong> 1.33</li>
+                        <li><strong>Tarefa B:</strong> 0.83</li>
+                    </ul>
+                </li>
+                <li><strong>Impacto do aumento da frequência do clock:</strong>
+                    <ul>
+                        <li><strong>Desempenho:</strong> Aumenta a velocidade de execução.</li>
+                        <li><strong>Energia:</strong> Consumo aumenta quase quadraticamente.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="tema3">
+            <h2>Tema 3: Hierarquia de Memória e Memória Cache</h2>
+            <ul>
+                <li><strong>Para que serve a memória cache?</strong> Reduz a latência, armazenando dados frequentemente acessados.</li>
+                <li><strong>Quantos blocos há na cache?</strong> 64 bytes / 16 bytes = 4 blocos.</li>
+                <li><strong>Por que o acesso à memória cache é mais rápido?</strong> Está mais próxima do processador e usa tecnologias mais rápidas.</li>
+            </ul>
+        </section>
+
+        <section id="tema4">
+            <h2>Tema 4: Memória Virtual</h2>
+            <ul>
+                <li><strong>Diferença entre paginação e segmentação:</strong>
+                    <ul>
+                        <li><strong>Paginação:</strong> Blocos de tamanho fixo.</li>
+                        <li><strong>Segmentação:</strong> Blocos de tamanho variável.</li>
+                    </ul>
+                </li>
+                <li><strong>Quantas páginas podem ser gerenciadas?</strong> 128 páginas.</li>
+            </ul>
+        </section>
+
+        <section id="tema5">
+            <h2>Tema 5: Periféricos, Barramentos e Entrada/Saída</h2>
+            <ul>
+                <li><strong>Blocos transferidos por segundo:</strong> 390625 blocos.</li>
+                <li><strong>O que é um barramento?</strong> Um sistema de comunicação para troca de dados entre componentes.</li>
+                <li><strong>Exemplo de periféricos:</strong> Entrada: teclado; Saída: monitor.</li>
+            </ul>
+        </section>
+
+        <section id="tema6">
+            <h2>Tema 6: Arquiteturas Avançadas</h2>
+            <ul>
+                <li><strong>O que é pipeline em processadores?</strong> Técnica para dividir a execução em estágios sobrepostos, melhorando o throughput.</li>
+                <li><strong>Impacto de dependência de dados:</strong> Pode causar atrasos (stalls); evitado com técnicas como forwarding.</li>
+                <li><strong>Divisão de instruções no pipeline:</strong> Permite processar várias instruções simultaneamente, aumentando o desempenho.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
